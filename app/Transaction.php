@@ -2,10 +2,14 @@
 
 namespace App;
 
+use App\Transformers\TransactionTransformer;
 use Illuminate\Database\Eloquent\Model;
 
 class Transaction extends Model
 {
+
+    public $transformer = TransactionTransformer::class;
+
     protected $fillable = [
         'quantity',
         'buyer_id',

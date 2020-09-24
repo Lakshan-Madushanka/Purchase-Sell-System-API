@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd49dece-558d-4adb-b9ca-81c833662259" name="Default Changelist" comment="Functionalities of Models, controllers, relationship mappings  and mail system has been done :bulb:">
+    <list default="true" id="dd49dece-558d-4adb-b9ca-81c833662259" name="Default Changelist" comment="Added some missing files and created signature middleware :rocket:">
+      <change beforePath="$PROJECT_DIR$/.idea/Restful_API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Restful_API.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Buyer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Buyer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Seller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Seller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/ApiResponser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/ApiResponser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Transaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transaction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,6 +135,9 @@
       <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
       <path value="$PROJECT_DIR$/vendor/laravel/framework" />
       <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/league/fractal" />
+      <path value="$PROJECT_DIR$/vendor/spatie/fractalistic" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-fractal" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hMOSmIUJuIJWqxgLcbKOro5QlH" />
@@ -187,7 +201,7 @@
       <workItem from="1600667544330" duration="18118000" />
       <workItem from="1600756427546" duration="20765000" />
       <workItem from="1600840352178" duration="18006000" />
-      <workItem from="1600924793372" duration="5514000" />
+      <workItem from="1600924793372" duration="14585000" />
     </task>
     <task id="LOCAL-00001" summary="Functionalities of Models, controllers, relationship mappings  and mail system has been done :bulb:">
       <created>1600925141020</created>
@@ -196,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600925141020</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added some missing files and created signature middleware :rocket:">
+      <created>1600931243748</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600931243748</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +240,7 @@
     <confirmRemoveEmptyChangelist value="1" />
     <option name="RELOAD_CONTEXT" value="false" />
     <MESSAGE value="Functionalities of Models, controllers, relationship mappings  and mail system has been done :bulb:" />
-    <option name="LAST_COMMIT_MESSAGE" value="Functionalities of Models, controllers, relationship mappings  and mail system has been done :bulb:" />
+    <MESSAGE value="Added some missing files and created signature middleware :rocket:" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some missing files and created signature middleware :rocket:" />
   </component>
 </project>

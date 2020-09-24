@@ -2,11 +2,14 @@
 
 namespace App;
 
+use App\Transformers\ProductTransformer;
 use Illuminate\Database\Eloquent\Model;
 use phpDocumentor\Reflection\Types\False_;
 
 class Product extends Model
 {
+    public $transformer = ProductTransformer::class;
+
     const AVAILABLE_PRODUCT = 'available';
     const UNAVAILABLE_PRODUCT = 'unavailable';
 
