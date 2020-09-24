@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Category;
 
+use App\Category;
+use App\Http\Controllers\ApiController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class CategoryController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $category = Category::all();
+        return $this->showAll($category);
     }
 
     /**
@@ -24,7 +27,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,18 +38,31 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->only('id', 'name', 'description');
+
+        $rules = [
+            'name' => 'required|max:200',
+            'description' => 'required|max:1000'
+        ];
+
+        $this->validate($request, $rules);
+
+        $category = Category::create($data);
+
+        return $this->showOne($category,'Following category added successfullt', 201);
+
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param Category $category
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Category $category)
     {
-        //
+        return $this->showOne($category);
     }
 
     /**
@@ -67,9 +83,28 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Category $category)
     {
-        //
+/*
+        $rules = [
+            'name' => 'max:200|unique:categories',
+            'description' => 'max:1000'
+        ];
+
+        $this->validate($request, $rules);*/
+
+        $category->fill($request->intersect([
+            'name',
+            'description'
+        ]));
+
+        if($category->isClean()) {
+            return $this->errorResponse('You need to specify any different value to update', 422);
+        }
+
+        $category->save();
+
+        return $this->showOne($category,'Following category updated successfullt', 201);
     }
 
     /**
@@ -78,8 +113,11 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        return $this->showOne($category,'Following user deleted successfully', 200);
+
     }
 }

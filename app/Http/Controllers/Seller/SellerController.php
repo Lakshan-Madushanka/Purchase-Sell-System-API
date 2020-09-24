@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Seller;
 
+use App\Http\Controllers\ApiController;
 use App\Http\Controllers\Controller;
+use App\Seller;
 use Illuminate\Http\Request;
 
-class SellerController extends Controller
+class SellerController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,9 @@ class SellerController extends Controller
      */
     public function index()
     {
-        //
+        $sellers = Seller::has('products')->get();
+        return response()->json(['data' => $sellers], 200);
+
     }
 
     /**
@@ -24,7 +28,7 @@ class SellerController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,7 +39,6 @@ class SellerController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
@@ -44,9 +47,13 @@ class SellerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Seller $seller)
     {
-        //
+        /*if($seller->products()->count() == 1) {
+            return response()->json(["data" => $seller], 200);
+        }*/ //scope used
+        return response()->json(["data" => $seller], 200);
+
     }
 
     /**
