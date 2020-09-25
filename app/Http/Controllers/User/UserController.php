@@ -153,7 +153,6 @@ class UserController extends ApiController
 
     }
 
-
     /**
      * Remove the specified resource from storage.
      *
@@ -164,7 +163,7 @@ class UserController extends ApiController
     {
         $user->delete();
 
-        return $this->successResponse('Bellow record deleted successfully', $user);
+        return $this->successResponse($user,'Bellow record deleted successfully');
 
         /*return response()->json([
             'message' => 'Bellow record deleted successfully',
