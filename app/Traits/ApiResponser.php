@@ -4,6 +4,7 @@ namespace App\Traits;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Spatie\Fractal\Facades\Fractal;
 
 trait ApiResponser
@@ -26,8 +27,9 @@ trait ApiResponser
         }
 
         $transformer = $collection->first()->transformer;
-        $collection = $this->sortData($collection, $transformer);
         $collection = $this->filterData($collection, $transformer);
+        $collection = $this->sortData($collection, $transformer);
+        $collection = $this->paginate($collection);
         $collection = $this->transformData($collection, $transformer);
         return  $this->successResponse($collection, $message , $code);
     }
@@ -70,12 +72,38 @@ trait ApiResponser
 
                     if (isset($attribute, $value)) {
 
+                        /*if($attribute == 'sort_by' or $attribute == 'page') {
+                            continue;
+                        }*/
                         $filterAttribute = $transformer::originalAttribute($attribute);
-                        $collection = $collection->where($filterAttribute, $value);
+
+                        if($filterAttribute != null) {
+                            $collection = $collection->where($filterAttribute, $value);
+                        }
                     }
                 }
             }
            return $collection;
+
+        }
+
+        public function paginate(Collection $collection) {
+
+            $page = LengthAwarePaginator::resolveCurrentPage();
+
+            $perPage = 10;
+            if(request()->has('per_page')) {
+                $perPage = (int)request()->query('per_page');
+            }
+            $results = $collection->slice(($page-1) * $perPage, $perPage);
+
+            $paginated = new LengthAwarePaginator($results, $collection->count(), $perPage, $page, [
+                'path' => LengthAwarePaginator::resolveCurrentPath(),
+            ]);
+
+            $paginated->appends(request()->all());
+
+            return $paginated;
 
         }
 }
