@@ -35,9 +35,23 @@ class CategoryTransformer extends TransformerAbstract
         return [
             'identifier' => (int)$category->id,
             'title' => (string)$category->name,
-            'identifier' => (string)$category->description,
+            'description' => (string)$category->description,
             'creationDate' => (int)$category->created_at,
             'lastchange' => (int)$category->updated_at,
         ];
+    }
+
+    public static  function originalAttribute($index) {
+
+        $attributes = [
+            'identifier' => 'id',
+            'title' =>  'name',
+            'description' => 'description',
+            'creationDate' => 'created_at',
+            'lastchange' => 'updated_at',
+        ];
+
+        return isset($attributes[$index]) ?  $attributes[$index] :  null;
+
     }
 }

@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd49dece-558d-4adb-b9ca-81c833662259" name="Default Changelist" comment="Added some missing files and created signature middleware :rocket:">
-      <change beforePath="$PROJECT_DIR$/.idea/Restful_API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Restful_API.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="dd49dece-558d-4adb-b9ca-81c833662259" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Buyer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Buyer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Seller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Seller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Traits/ApiResponser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/ApiResponser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Transaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transaction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Transformers/BuyerTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transformers/BuyerTransformer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Transformers/CategoryTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transformers/CategoryTransformer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Transformers/ProductTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transformers/ProductTransformer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Transformers/SellerTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transformers/SellerTransformer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Transformers/TransactionTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transformers/TransactionTransformer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Transformers/UserTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transformers/UserTransformer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +196,8 @@
       <workItem from="1600667544330" duration="18118000" />
       <workItem from="1600756427546" duration="20765000" />
       <workItem from="1600840352178" duration="18006000" />
-      <workItem from="1600924793372" duration="14585000" />
+      <workItem from="1600924793372" duration="14857000" />
+      <workItem from="1601015212154" duration="3824000" />
     </task>
     <task id="LOCAL-00001" summary="Functionalities of Models, controllers, relationship mappings  and mail system has been done :bulb:">
       <created>1600925141020</created>
@@ -217,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600931243748</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added transformers for models using spatie/laravel-fractal package">
+      <created>1600968032283</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600968032283</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +244,7 @@
     <option name="RELOAD_CONTEXT" value="false" />
     <MESSAGE value="Functionalities of Models, controllers, relationship mappings  and mail system has been done :bulb:" />
     <MESSAGE value="Added some missing files and created signature middleware :rocket:" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some missing files and created signature middleware :rocket:" />
+    <MESSAGE value="Added transformers for models using spatie/laravel-fractal package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added transformers for models using spatie/laravel-fractal package" />
   </component>
 </project>
