@@ -50,7 +50,7 @@ class ProductController extends ApiController
      */
     public function show(Product $product)
     {
-        return $this->showAll($product);
+        return $this->showOne($product);
     }
 
     /**

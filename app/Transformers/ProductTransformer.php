@@ -43,6 +43,30 @@ class ProductTransformer extends TransformerAbstract
             'creationDate' => $product->created_at,
             'lastchange' => $product->updated_at,
 
+            'links' => [
+                [
+                    'rel' => 'self',
+                    'href' => route('products.show', $product->id)
+                ],
+                [
+                    'rel' => 'product.buyers',
+                    'href' => route('products.buyers.index', $product->id)
+                ],
+                [
+                    'rel' => 'product.categories',
+                    'href' => route('products.categories.index', $product->id)
+                ],
+                [
+                    'rel' => 'product.transactions',
+                    'href' => route('products.transactions.index', $product->id)
+                ],
+                [
+                    'rel' => 'product.seller',
+                    'href' => route('sellers.show', $product->seller_id)
+                ]
+            ]
+
+
         ];
     }
 

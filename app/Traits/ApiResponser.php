@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Validator;
 
 trait ApiResponser
 {
@@ -93,6 +94,12 @@ trait ApiResponser
 
     protected function paginate(Collection $collection)
     {
+
+        $rules = [
+            'per_page' => 'integer|min:1|max:50'
+        ];
+
+        Validator::validate(request()->all(), $rules);
 
         $page = LengthAwarePaginator::resolveCurrentPage();
 
