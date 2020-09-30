@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Seller;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\Controller;
 use App\Seller;
+use App\Transformers\SellerTransformer;
 use Illuminate\Http\Request;
 
 class SellerController extends ApiController

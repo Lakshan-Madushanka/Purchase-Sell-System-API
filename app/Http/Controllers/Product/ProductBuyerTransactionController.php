@@ -6,11 +6,17 @@ use App\Http\Controllers\ApiController;
 use App\Http\Controllers\Controller;
 use App\Product;
 use App\Transaction;
+use App\Transformers\TransactionTransformer;
 use App\User;
 use Illuminate\Http\Request;
 
 class ProductBuyerTransactionController extends ApiController
 {
+    public function __construct()
+    {
+        parent::__contruct();
+        $this->middleware('transform.input:' .TransactionTransformer::class)->only(['store']);
+    }
     /**
      * Display a listing of the resource.
      *

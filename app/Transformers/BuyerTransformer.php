@@ -43,16 +43,16 @@ class BuyerTransformer extends TransformerAbstract
         ];
     }
 
-    public static  function originalAttribute($index) {
+    public static  function transformAttribute($index) {
 
         $attributes = [
-            'identifier' => 'id',
+            'id' => 'identifier',
             'name' => 'name',
             'email' => 'email',
-            'isVerified' =>'verified',
-            'isAdmin' => 'admin',
-            'creationDate' => 'created_at',
-            'lastchange' => 'updated_at',
+            'verified' =>'isVerified',
+            'admin' => 'isAdmin',
+            'created_at' => 'creationDate',
+            'updated_at' => 'lastchange',
         ];
 
         return isset($attributes[$index]) ?  $attributes[$index] :  null;
