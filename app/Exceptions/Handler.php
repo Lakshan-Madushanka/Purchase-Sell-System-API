@@ -123,7 +123,7 @@ class Handler extends ExceptionHandler
     protected function unauthenticated($request, AuthenticationException $exception)
     {
         if($this->isFrontEnd($request)) {
-            redirect()->guest('login');
+            return redirect()->guest('login');
         }
         return $this->errorResponse('unauthenticated', 401);
     }
