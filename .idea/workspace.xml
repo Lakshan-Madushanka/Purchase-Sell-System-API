@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd49dece-558d-4adb-b9ca-81c833662259" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Buyer/BuyerCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Buyer/BuyerCategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Buyer/BuyerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Buyer/BuyerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Buyer/BuyerProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Buyer/BuyerProductController.php" afterDir="false" />
@@ -17,9 +17,7 @@
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Transaction/TransactionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Transaction/TransactionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Transaction/TransactionSellerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Transaction/TransactionSellerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +167,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/home" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Traits" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -179,6 +177,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Restful-API\app\Traits" />
       <recent name="C:\laragon\www\Restful-API\resources\views\home" />
     </key>
   </component>
@@ -231,7 +230,8 @@
       <workItem from="1601366744234" duration="205000" />
       <workItem from="1601440597433" duration="12647000" />
       <workItem from="1601532426145" duration="11321000" />
-      <workItem from="1601613456100" duration="16051000" />
+      <workItem from="1601613456100" duration="20709000" />
+      <workItem from="1601697701512" duration="3876000" />
     </task>
     <task id="LOCAL-00001" summary="Functionalities of Models, controllers, relationship mappings  and mail system has been done :bulb:">
       <created>1600925141020</created>
@@ -296,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601624086024</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Restricted OAuth2 clients using scopes. :buld:">
+      <created>1601637804886</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1601637804886</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +334,18 @@
     <MESSAGE value="Implemented HATEOAS" />
     <MESSAGE value="Adjusted validation messages according to transformers" />
     <MESSAGE value="Implemented initial security layer with OAuth2 using laravel passport :bulb:" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented initial security layer with OAuth2 using laravel passport :bulb:" />
+    <MESSAGE value="Restricted OAuth2 clients using scopes. :buld:" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restricted OAuth2 clients using scopes. :buld:" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Seller/SellerProductController.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

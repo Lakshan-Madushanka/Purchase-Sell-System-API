@@ -16,6 +16,8 @@ class BuyerController extends ApiController
     {
         parent::__construct();
         $this->middleware('scope:read-general')->only('show');
+        $this->middleware('can:view,buyer')->only('show');
+
     }
 
 /**
@@ -25,6 +27,8 @@ class BuyerController extends ApiController
  */
     public function index()
     {
+        $this->allowedAdminAction();
+
         $buyers = Buyer::has('transactions')->get();
         return $this->showAll($buyers);
     //return response()->json(['data' => $buyers], 200);

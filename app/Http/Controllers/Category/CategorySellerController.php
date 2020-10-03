@@ -21,6 +21,8 @@ class CategorySellerController extends ApiController
      */
     public function index(Category $category)
     {
+        $this->allowedAdminAction();
+
         $categorySellers = $category->products()->with('seller')->get();
 
         if(count($categorySellers)>0) {

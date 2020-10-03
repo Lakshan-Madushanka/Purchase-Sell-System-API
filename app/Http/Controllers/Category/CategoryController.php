@@ -45,6 +45,8 @@ class CategoryController extends ApiController
      */
     public function store(Request $request)
     {
+        $this->allowedAdminAction();
+
         $data = $request->only('id', 'name', 'description');
 
         $rules = [
@@ -92,13 +94,15 @@ class CategoryController extends ApiController
      */
     public function update(Request $request, Category $category)
     {
-/*
-        $rules = [
-            'name' => 'max:200|unique:categories',
-            'description' => 'max:1000'
-        ];
+        $this->allowedAdminAction();
 
-        $this->validate($request, $rules);*/
+        /*
+                $rules = [
+                    'name' => 'max:200|unique:categories',
+                    'description' => 'max:1000'
+                ];
+
+                $this->validate($request, $rules);*/
 
         $category->fill($request->intersect([
             'name',
@@ -122,6 +126,8 @@ class CategoryController extends ApiController
      */
     public function destroy(Category $category)
     {
+        $this->allowedAdminAction();
+
         $category->delete();
 
         return $this->showOne($category,'Following user deleted successfully', 200);

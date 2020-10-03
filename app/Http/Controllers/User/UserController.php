@@ -20,6 +20,10 @@ class UserController extends ApiController
         $this->middleware('client.credentials')->only(['store', 'resend']);
         $this->middleware('transform.input:' .UserTransformer::class)->only(['store', 'update']);
         $this->middleware('scope:manage-account')->only(['show', 'update']);
+        $this->middleware('can:view,user')->only('show');
+        $this->middleware('can:update,user')->only('update');
+        $this->middleware('can:delete,user')->only('destroy');
+
     }
 
     /**
@@ -29,6 +33,8 @@ class UserController extends ApiController
      */
     public function index()
     {
+        $this->allowedAdminAction();
+
         $users = User::all();
 
         //return response()->json(['data' => $users], 200);
@@ -109,6 +115,8 @@ class UserController extends ApiController
      */
     public function update(Request $request, $user)
     {
+        $this->allowedAdminAction();
+
         //$user = User::findOrFail($id); route model inding
         //die($user);
         $rules = [

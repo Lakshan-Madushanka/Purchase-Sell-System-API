@@ -21,6 +21,8 @@ class CategoryTransactionController extends ApiController
      */
     public function index(Category $category)
     {
+        $this->allowedAdminAction();
+
         $transactionCategories = $category->product()
                                 ->whereHas('transactions')
                                 ->with('transactions')
