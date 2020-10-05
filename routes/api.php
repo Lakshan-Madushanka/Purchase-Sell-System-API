@@ -20,11 +20,14 @@ use Illuminate\Support\Facades\Route;
 });*/
 
             //users
+Route::get('users/me', 'User\UserController@me')->name('me');
+
 Route::apiResource('users', 'User\UserController', ['except' => ['create', 'edit']]);
 
 Route::get('users/verify/{token}', 'User\UserController@verify')->name('verify');
 
-Route::get('users/{user}/resend', 'User\UserController@resend')->name('verify');
+Route::get('users/{user}/resend', 'User\UserController@resend')->name('resend');
+
 
             //buyers
 Route::resource('buyers', 'Buyer\BuyerController', ['only' => ['index', 'show' ]]);
